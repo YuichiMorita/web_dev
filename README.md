@@ -1,9 +1,27 @@
 # Docker-composeによるWeb開発環境ベース
 
+## Overview
+
+docker-compose.ymlによるweb環境開発ベース
+
+## Author
+
+守田裕一 (morita@s-o-s.jp)
+
+## 使い方
+
+  git clone git@github.com:YuichiMorita/web_dev.git <MYPROJECT>
+  cd <MYPROJECT>
+  docker-compose up -d
+  <https://localhost/> にアクセスするとphpinfoとDB接続テストプログラムが確認できます。
+
 ## nginx
 mainline-alpineを使用
+
 <https://hub.docker.com/_/nginx/>
+
 <https://github.com/nginxinc/docker-nginx/blob/f8fad321cf58d5cbcafa3d9fa15314b8a77b5e65/mainline/alpine/Dockerfile>
+
 自己証明書にてhttp2のセットアップを行っている
 
 * nginxの設定ファイル web/default.conf
@@ -13,8 +31,11 @@ mainline-alpineを使用
 
 ## php
 php7-fpm-alpineを使用
+
 <https://hub.docker.com/_/php/>
+
 <https://github.com/docker-library/php/blob/fd8e15250a0c7667b161c34a25f7916b01f72367/7.2/alpine3.6/fpm/Dockerfile>
+
 Dockerfileにてpdo_mysql mysqli mbstringをインストール
 
 * php.iniの場所　php7/php.ini
@@ -22,8 +43,11 @@ Dockerfileにてpdo_mysql mysqli mbstringをインストール
 
 ## mysql
 mysql5.7を使用
+
 <https://hub.docker.com/_/mysql/>
+
 <https://github.com/docker-library/mysql/blob/607b2a65aa76adf495730b9f7e6f28f146a9f95f/5.7/Dockerfile>
+
 データベースのアクセスアカウントは.envに記載
 
 * mysqlのログ出力 data/logs/mysql
