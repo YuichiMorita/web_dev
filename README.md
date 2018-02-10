@@ -10,7 +10,7 @@ docker-compose.ymlによるweb環境開発ベース
 
 ## 使い方
 
-    git clone git@github.com:YuichiMorita/web_dev.git <MYPROJECT>  
+    git clone https://github.com/YuichiMorita/web_dev.git <MYPROJECT>  
     cd <MYPROJECT>  
     docker-compose up -d  
     -起動や初期化の為に暫く待つ 初回は-dオプション無しでログを眺める方が良いかも-  
